@@ -346,6 +346,25 @@ footer nav ul {
     z-index: -1;
   }
 
+  .img-container-tab {
+    padding: 20px;
+    position: relative;
+  }
+
+  .img-container-tab::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 500px;
+    height: 300px;
+    background-color: var(--blue);
+    border-radius: 0px 100px 100px 0px;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+
   .hero h1 {
     font-size: 35px;
     margin-bottom: 20px;
