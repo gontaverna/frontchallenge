@@ -79,6 +79,7 @@ body {
 
 .tabs a {
   border-bottom: 1px solid;
+  font-size: 25px;
 }
 
 .tabs a:active {
@@ -226,7 +227,7 @@ footer nav ul {
 }
 
 .logo i {
-  font-size: 25px;
+  font-size: 32px;
   color: #fff;
 }
 
@@ -242,7 +243,6 @@ footer nav ul {
   justify-content: space-around;
   align-items: center;
 }
-
 
 @media only screen and (min-width: 768px) {
   /* Estilos de la cabecera */
@@ -549,7 +549,6 @@ footer nav ul {
   .navbar-container {
     justify-content: space-between;
   }
-  
 
   header nav {
     display: flex;

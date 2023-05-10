@@ -21,9 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   menuButton.addEventListener("click", () => {
     menuContainer.classList.toggle("active");
+    document.body.style.overflow = "hidden";
   });
 
   btnClose.addEventListener("click", () => {
     menuContainer.classList.toggle("active");
+    document.body.style.overflow = "auto";
   });
 });
