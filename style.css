@@ -34,6 +34,7 @@ body {
   text-decoration: none;
   font-size: 18px;
   transition: all 0.3s ease;
+  font-weight: bold;
   display: inline-block;
   color: #fff;
 }
@@ -75,21 +76,20 @@ body {
 
 .tabs li {
   padding: 20px;
+  border-bottom: 1px solid var(--graylishBlue);
 }
 
 .tabs a {
-  border-bottom: 1px solid;
-  font-size: 25px;
-}
-
-.tabs a:active {
-  border-bottom-color: var(--red) !important;
-  border-bottom: 2px solid;
+  font-size: 22px;
 }
 
 .tabs a:hover {
   cursor: pointer;
-  color: var(--red);
+}
+
+.tab-selected {
+  border-bottom: 4px solid red;
+  padding: 18px;
 }
 
 .tabs-content {
@@ -98,6 +98,10 @@ body {
 
 .tabs-content h2 {
   margin-top: 0;
+}
+
+.dots {
+  width: 100% !important;
 }
 
 .faqs {
@@ -185,7 +189,7 @@ body {
 
 .contact h3 {
   font-size: 18px;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   margin-bottom: 20px;
   text-align: center;
   color: #fff;
@@ -244,8 +248,16 @@ footer nav ul {
   align-items: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 870px) {
   /* Estilos de la cabecera */
+
+  .br-mobile {
+    display: none;
+  }
+
+  .open-mobile {
+    display: none;
+  }
 
   header {
     padding: 30px;
@@ -274,6 +286,12 @@ footer nav ul {
   nav a {
     color: black;
     text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  nav ul li .button {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   nav a:hover {
@@ -366,7 +384,7 @@ footer nav ul {
   }
 
   .hero h1 {
-    font-size: 35px;
+    font-size: 45px;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -395,8 +413,8 @@ footer nav ul {
     text-align: center;
   }
 
-  .features > .hero-container p,
-  .features > .hero-container h1 {
+  .tab > .hero-container p,
+  .tab > .hero-container h1 {
     text-align: start;
   }
 
@@ -453,15 +471,8 @@ footer nav ul {
     padding: 20px;
   }
 
-  .tabs a:active {
-    border-bottom-color: var(--red) !important;
-    border-bottom: 2px solid;
-  }
-
   .tabs a:hover {
-    cursor: pointer;
-    border-bottom-color: var(--red) !important;
-    border-bottom: 2px solid;
+    color: var(--red);
   }
 
   .tabs-content {
@@ -499,7 +510,7 @@ footer nav ul {
     height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
 
@@ -521,7 +532,7 @@ footer nav ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px dashed #ccc;
+
     width: 100%;
   }
 
@@ -558,7 +569,7 @@ footer nav ul {
 }
 
 /* Estilos para pantallas más pequeñas que 768 píxeles */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 870px) {
   /* Estilos para el encabezado */
 
   header {
@@ -569,6 +580,13 @@ footer nav ul {
     justify-content: space-between;
   }
 
+  br {
+    display: none;
+  }
+
+  .br-mobile {
+    display: block;
+  }
   header nav {
     display: flex;
     position: absolute;
@@ -646,6 +664,19 @@ footer nav ul {
     margin: 1rem 0;
   }
 
+  .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .menu-mobile .button {
+    width: 100%;
+    padding: 15px;
+  }
+
   /* Estilos para la sección hero */
 
   .hero {
@@ -688,6 +719,10 @@ footer nav ul {
     position: relative;
   }
 
+  .tabs li {
+    width: 100%;
+  }
+
   .img-container-tab {
     padding: 20px;
     position: relative;
@@ -723,8 +758,12 @@ footer nav ul {
     margin-bottom: 40px;
     font-weight: 400;
     color: var(--grey);
+    line-height: 1.5;
   }
 
+  .faq-card-body p {
+    text-align: start !important;
+  }
   .faqs .hero-container {
     align-items: center;
   }
@@ -748,6 +787,10 @@ footer nav ul {
     padding: 50px 0;
     text-align: center;
   }
+  .card-content {
+    padding-top: 10px;
+    width: 100%;
+  }
 
   .cards {
     display: flex;
@@ -757,12 +800,17 @@ footer nav ul {
   }
 
   .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
-    padding: 50px;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
     width: 350px;
   }
 
@@ -782,6 +830,9 @@ footer nav ul {
     margin-bottom: 30px;
   }
 
+  .card .button {
+    width: 80%;
+  }
   .card .btn-container {
     display: flex;
     justify-content: center;
@@ -805,6 +856,11 @@ footer nav ul {
     margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    font-weight: bold;
   }
 
   input[type="email"]:focus {
@@ -841,5 +897,9 @@ footer nav ul {
   footer .navbar-container {
     flex-direction: column;
     justify-content: center;
+  }
+
+  .open-mobile {
+    display: none;
   }
 }
