@@ -457,6 +457,10 @@ footer nav ul {
     color: var(--red);
   }
 
+  .tabs a:hover {
+    color: var(--red);
+  }
+
   /* Estilos de la sección servicios */
 
   .features {
@@ -500,10 +504,6 @@ footer nav ul {
   .tabs li {
     padding: 20px;
     text-align: center;
-  }
-
-  .tabs a:hover {
-    color: var(--red);
   }
 
   .tabs-content {
