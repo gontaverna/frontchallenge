@@ -63,12 +63,32 @@ body {
   background-color: var(--red);
 }
 
+.danger:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
 .info {
   background-color: var(--blue);
 }
 
+.button:hover {
+  background-color: #fff;
+  border: 1px solid;
+}
+
+.info:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
 .grey {
   background-color: var(--grey);
+}
+
+.grey:hover {
+  color: var(--grey);
+  border-color: var(--grey);
 }
 
 .tabs li {
@@ -248,25 +268,6 @@ footer nav ul {
 @media only screen and (min-width: 870px) {
   /* Estilos de la cabecera */
 
-  .button:hover {
-    background-color: #fff;
-    border: 1px solid;
-  }
-
-  .info:hover {
-    color: var(--blue);
-    border-color: var(--blue);
-  }
-
-  .grey:hover {
-    color: var(--grey);
-    border-color: var(--grey);
-  }
-
-  .danger:hover {
-    color: var(--red);
-    border-color: var(--red);
-  }
   .br-mobile {
     display: none;
   }
