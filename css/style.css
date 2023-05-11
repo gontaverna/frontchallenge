@@ -125,6 +125,7 @@ body {
   flex-direction: column;
   margin-bottom: 25px;
   width: 500px;
+  max-width: 500px;
 }
 
 .faq-card {
@@ -873,7 +874,7 @@ footer nav ul {
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
-    width: 350px;
+    max-width: 350px;
   }
   .contact-container {
     flex-direction: column;
